@@ -1,0 +1,807 @@
+/* Custom Variables */
+:root {
+  --primary-color: #2c3e50;
+  --secondary-color: #3498db;
+  --accent-color: #e74c3c;
+  --text-color: #2c3e50;
+  --light-bg: #ecf0f1;
+}
+
+/* General Styles */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.9)),
+    url("path/to/your/background-image.jpg") center/cover;
+  color: white;
+  padding: 100px 0;
+}
+
+.hero-section h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.hero-section p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Cards */
+.card {
+  border: none;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-title {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+/* Navigation */
+.navbar {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+/* Features Section */
+.features-section {
+  background-color: var(--light-bg);
+  padding: 50px 0;
+  margin-top: 50px;
+}
+
+.features-section h2 {
+  color: var(--primary-color);
+  margin-bottom: 30px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-section p {
+    font-size: 1.2rem;
+  }
+}
+
+/* Animation Classes */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Interactive Elements */
+.interactive-element {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.interactive-element:hover {
+  transform: scale(1.05);
+}
+
+/* Custom Button Styles */
+.btn-primary {
+  background-color: var(--secondary-color);
+  border: none;
+  padding: 10px 25px;
+  font-weight: bold;
+}
+
+.btn-primary:hover {
+  background-color: darken(var(--secondary-color), 10%);
+  transform: translateY(-2px);
+}
+
+/* Modal Styles */
+.modal-content {
+  border: none;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+  background-color: var(--light-bg);
+}
+
+.verses-section {
+  background-color: var(--light-bg);
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+.verses-section p {
+  font-family: "Times New Roman", serif;
+  color: var(--primary-color);
+}
+
+.insights-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.insights-section li {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--light-bg);
+}
+
+.insights-section li:last-child {
+  border-bottom: none;
+}
+
+/* Animation for modal */
+.modal.fade .modal-dialog {
+  transform: scale(0.8);
+  transition: transform 0.3s ease-out;
+}
+
+.modal.show .modal-dialog {
+  transform: scale(1);
+}
+
+/* Quiz Styles */
+.high-scores .list-group-item {
+  background-color: transparent;
+  border-color: var(--light-bg);
+}
+
+.high-scores .list-group-item:first-child {
+  background-color: var(--light-bg);
+  font-weight: bold;
+}
+
+.question {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.options button {
+  transition: all 0.2s ease;
+}
+
+.options button:hover {
+  transform: translateX(-5px);
+}
+
+/* Share button */
+.btn-outline-primary {
+  border-color: var(--secondary-color);
+  color: var(--secondary-color);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+/* Learning Section Styles */
+.exercise-card {
+  background-color: var(--light-bg);
+  padding: 1.5rem;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.exercise-card:hover {
+  transform: translateY(-3px);
+}
+
+.exercise-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background-color: var(--secondary-color);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.exercise-card:hover::before {
+  opacity: 1;
+}
+
+.insight-card {
+  border-left: 4px solid var(--secondary-color);
+  padding-left: 1rem;
+  margin-left: 1rem;
+}
+
+.reflection-prompt {
+  font-style: italic;
+  color: var(--secondary-color);
+}
+
+.nav-tabs .nav-link {
+  color: var(--primary-color);
+  border: none;
+  padding: 1rem 2rem;
+}
+
+.nav-tabs .nav-link.active {
+  color: var(--secondary-color);
+  border-bottom: 3px solid var(--secondary-color);
+  font-weight: bold;
+}
+
+/* Timer Animation */
+@keyframes timerProgress {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
+}
+
+.timer-bar {
+  height: 4px;
+  background-color: var(--secondary-color);
+  animation: timerProgress linear forwards;
+}
+
+/* Timer Display */
+.timer-display {
+  font-size: 3rem;
+  font-weight: bold;
+  font-family: monospace;
+  color: var(--primary-color);
+}
+
+/* Notes Section */
+.notes-section textarea {
+  border: 1px solid var(--light-bg);
+  padding: 1rem;
+  font-size: 0.9rem;
+  resize: vertical;
+  transition: border-color 0.3s ease;
+}
+
+.notes-section textarea:focus {
+  border-color: var(--secondary-color);
+  box-shadow: none;
+  outline: none;
+}
+
+/* Task Cards */
+.task-card {
+  background-color: var(--light-bg);
+  padding: 1.5rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.task-card.completed {
+  opacity: 0.7;
+}
+
+.task-card.completed::after {
+  content: "✓";
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: var(--secondary-color);
+  font-size: 1.2rem;
+}
+
+.task-checkbox .form-check-input {
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+}
+
+.task-checkbox .form-check-input:checked {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+}
+
+.task-meta .badge {
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  padding: 0.4rem 0.8rem;
+}
+
+.task-progress-bar {
+  background-color: var(--secondary-color);
+  transition: width 0.3s ease;
+}
+
+/* Task Types */
+.badge[data-type="observation"] {
+  background-color: #3498db;
+}
+.badge[data-type="reflection"] {
+  background-color: #9b59b6;
+}
+.badge[data-type="action"] {
+  background-color: #2ecc71;
+}
+.badge[data-type="planning"] {
+  background-color: #f1c40f;
+}
+
+/* Achievement Notification */
+.achievement-notification {
+  position: fixed;
+  bottom: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--primary-color);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: bottom 0.3s ease;
+  z-index: 1060;
+}
+
+.achievement-notification.show {
+  bottom: 20px;
+}
+
+.achievement-icon {
+  font-size: 2rem;
+}
+
+.achievement-content {
+  flex: 1;
+}
+
+.achievement-content h6 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.achievement-content p {
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* Achievement Badges in Profile */
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.achievement-badge {
+  background: var(--light-bg);
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+
+.achievement-badge.unlocked {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.achievement-badge .icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.achievement-badge.locked .icon {
+  filter: grayscale(1);
+}
+
+/* Secrets Button */
+.secrets-section button {
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  padding: 0.5rem 2rem;
+  transition: all 0.3s ease;
+}
+
+.secrets-section button:hover {
+  background-color: var(--primary-color);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.secrets-section button i {
+  transition: transform 0.3s ease;
+}
+
+.secrets-section button:hover i {
+  transform: rotate(45deg);
+}
+
+/* Secret Content Modal */
+.secret-modal .accordion-button:not(.collapsed) {
+  background-color: var(--light-bg);
+  color: var(--primary-color);
+}
+
+.secret-modal .accordion-body {
+  white-space: pre-line;
+  line-height: 1.8;
+}
+
+.secret-modal .modal-header {
+  background: linear-gradient(
+    45deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  color: white;
+}
+
+/* Secret Modal Styles */
+.secret-modal .modal-content {
+  background: linear-gradient(to bottom, #f8f9fa, #ffffff);
+  border: none;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.secret-modal .modal-header {
+  background: linear-gradient(135deg, var(--primary-color), #1a237e);
+  color: white;
+  padding: 1.5rem;
+  border-bottom: none;
+}
+
+.modal-title-wrapper {
+  text-align: center;
+  width: 100%;
+}
+
+.secret-subtitle {
+  display: block;
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin-top: 0.5rem;
+}
+
+.secret-intro {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.9),
+    rgba(255, 255, 255, 0.5)
+  );
+  border-radius: 10px;
+}
+
+.secret-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.secret-description {
+  font-size: 1.1rem;
+  color: var(--primary-color);
+}
+
+.custom-accordion .accordion-item {
+  border: none;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.custom-accordion .accordion-button {
+  background-color: #f8f9fa;
+  color: var(--primary-color);
+  font-weight: 600;
+  padding: 1.2rem;
+}
+
+.custom-accordion .accordion-button:not(.collapsed) {
+  background: linear-gradient(to right, var(--primary-color), #1a237e);
+  color: white;
+}
+
+.secret-content {
+  padding: 1rem;
+  line-height: 1.8;
+  white-space: pre-line;
+}
+
+.meditation-content {
+  background: linear-gradient(to bottom right, #f1f8ff, #ffffff);
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.meditation-instructions {
+  margin-bottom: 2rem;
+  font-style: italic;
+  line-height: 1.8;
+}
+
+.meditation-timer {
+  text-align: center;
+}
+
+.timer-display {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+}
+
+.btn-meditation {
+  background: linear-gradient(45deg, var(--primary-color), #1a237e);
+  color: white;
+  padding: 0.8rem 2rem;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.btn-meditation:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  color: white;
+}
+
+.secret-modal .modal-dialog {
+  max-width: 800px;
+}
+
+.feature-card {
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  border: none;
+  background: linear-gradient(145deg, #ffffff, #f3f3f3);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.08),
+    -5px -5px 15px rgba(255, 255, 255, 0.8);
+}
+
+.feature-card:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.12),
+    -8px -8px 20px rgba(255, 255, 255, 0.9);
+}
+
+.feature-icon {
+  font-size: 2.8rem;
+  background: linear-gradient(45deg, #007bff, #00bfff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover .feature-icon {
+  transform: scale(1.1);
+}
+
+.section-title {
+  position: relative;
+  padding-bottom: 20px;
+  font-weight: 600;
+  background: linear-gradient(45deg, #007bff, #00bfff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section-title:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(45deg, #007bff, #00bfff);
+  border-radius: 2px;
+}
+
+.feature-card .card-title {
+  color: #2c3e50;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
+}
+
+.feature-card:hover .card-title {
+  color: #007bff;
+}
+
+.feature-card .card-text {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.feature-card .btn-outline-primary {
+  border-width: 2px;
+  font-weight: 500;
+  padding: 0.5rem 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.feature-card .btn-outline-primary:hover {
+  background: linear-gradient(45deg, #007bff, #00bfff);
+  border-color: transparent;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+}
+
+/* Creation Day Modal Styles */
+.creation-day-modal .modal-content {
+  background: linear-gradient(to bottom right, #ffffff, #f8f9fa);
+  border: none;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.creation-day-modal .modal-header {
+  background: linear-gradient(
+    45deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  color: white;
+  border-bottom: none;
+  padding: 1.5rem;
+}
+
+.creation-day-modal .modal-title {
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+
+.creation-day-modal .verses-section {
+  background-color: rgba(52, 152, 219, 0.1);
+  padding: 1.5rem;
+  border-radius: 8px;
+  font-family: "Times New Roman", serif;
+}
+
+.creation-day-modal .verses-content {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  text-align: center;
+  color: #2c3e50;
+}
+
+.creation-day-modal .card {
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+  transition: transform 0.3s ease;
+}
+
+.creation-day-modal .card:hover {
+  transform: translateY(-5px);
+}
+
+.creation-day-modal .card-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.creation-day-modal ul {
+  padding-right: 1.2rem;
+}
+
+.creation-day-modal ul li {
+  margin-bottom: 0.8rem;
+}
+
+.creation-day-modal .btn-primary {
+  background: linear-gradient(
+    45deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  border: none;
+  padding: 0.8rem 2rem;
+  font-weight: 500;
+}
+
+.creation-day-modal .modal-footer {
+  border-top: none;
+  padding: 1.5rem;
+}
+
+/* Creation Day Modal Additional Styles */
+.verse-block {
+  background-color: rgba(52, 152, 219, 0.05);
+  padding: 2rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.verse-text {
+  font-family: "Times New Roman", serif;
+  font-size: 1.3rem;
+  line-height: 1.8;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+.explanation-title {
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--secondary-color);
+  padding-bottom: 0.5rem;
+}
+
+.task-group-title {
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.task-time {
+  font-size: 0.8rem;
+  color: #666;
+  margin-right: 0.5rem;
+}
+
+.task-badge {
+  background: linear-gradient(
+    45deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  color: white;
+  padding: 0.2rem 0.8rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  margin-right: 0.5rem;
+}
+
+.resources-section {
+  background-color: rgba(52, 152, 219, 0.05);
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-top: 2rem;
+}
+
+.resource-link {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.resource-link:hover {
+  color: var(--secondary-color);
+}

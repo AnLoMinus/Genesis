@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מעשה בראשית - מדריך אינטראקטיבי חינוכי</title>
+
+    <!-- Bootstrap RTL CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="#">מעשה בראשית</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">ראשי</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            ימי הבריאה
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#day1">יום ראשון - אור</a></li>
+                            <li><a class="dropdown-item" href="#day2">יום שני - רקיע</a></li>
+                            <li><a class="dropdown-item" href="#day3">יום שלישי - יבשה וצמחים</a></li>
+                            <li><a class="dropdown-item" href="#day4">יום רביעי - מאורות</a></li>
+                            <li><a class="dropdown-item" href="#day5">יום חמישי - דגים ועופות</a></li>
+                            <li><a class="dropdown-item" href="#day6">יום שישי - חיות ואדם</a></li>
+                            <li><a class="dropdown-item" href="#day7">יום שביעי - שבת</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#learn">למידה</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#games">משחקים</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showLearningSection()">מרחב למידה</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-section text-center py-5">
+        <div class="container">
+            <h1 class="display-4 mb-4">מעשה בראשית</h1>
+            <p class="lead mb-4">מסע אינטראקטיבי אל סיפור הבריאה</p>
+            <button class="btn btn-primary btn-lg">התחל ללמוד</button>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+        <!-- Search Section -->
+        <div class="search-section mb-4">
+            <div class="input-group">
+                <input type="text" id="searchInput" class="form-control" placeholder="חפש בתוכן..." />
+                <button class="btn btn-primary" id="startQuiz">
+                    התחל חידון
+                </button>
+            </div>
+        </div>
+
+        <!-- Days Grid -->
+        <div class="row g-4">
+            <!-- Day Cards will be added here by JavaScript -->
+        </div>
+
+        <!-- Features Section -->
+        <section class="features-section my-5">
+            <h2 class="text-center mb-4 section-title">תכונות מיוחדות</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="feature-card card h-100 fade-in">
+                        <div class="card-body text-center">
+                            <i class="fas fa-book-reader feature-icon mb-3"></i>
+                            <h5 class="card-title">מדריך אינטראקטיבי</h5>
+                            <p class="card-text">גלה את סיפור הבריאה דרך אנימציות, תמונות וקטעי שמע.</p>
+                            <a href="#guide" class="btn btn-outline-primary mt-2">התחל ללמוד</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card card h-100 fade-in" style="animation-delay: 0.2s">
+                        <div class="card-body text-center">
+                            <i class="fas fa-tablet-alt feature-icon mb-3"></i>
+                            <h5 class="card-title">ספר דיגיטלי</h5>
+                            <p class="card-text">צלול לעומק הפרשנויות והחידושים על כל יום בבריאה.</p>
+                            <a href="#book" class="btn btn-outline-primary mt-2">פתח ספר</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card card h-100 fade-in" style="animation-delay: 0.4s">
+                        <div class="card-body text-center">
+                            <i class="fas fa-gamepad feature-icon mb-3"></i>
+                            <h5 class="card-title">משחקים חינוכיים</h5>
+                            <p class="card-text">למד דרך משחקים אינטראקטיביים וחידונים מאתגרים.</p>
+                            <a href="#games" class="btn btn-outline-primary mt-2">שחק עכשיו</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4">
+        <div class="container text-center">
+            <p>© 2024 מעשה בראשית - כל הזכויות שמורות</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="secrets.js"></script>
+    <script src="scripts.js"></script>
+    <script src="creation-days.js"></script>
+</body>
+
+</html>
